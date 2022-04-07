@@ -337,6 +337,10 @@ Sub main()
 		End If
 	Next
 	file.Close
+	Window("Swedbank PassTicket").Close
+	Window("Swedbank PassTicket").Dialog("PASSPORT").WinButton("Yes").Click
+	Window("A").Close
+	Window("A").Dialog("PASSPORT").WinButton("Yes").Click
 	sendMailAttachment("Output logs / Bobby")
 End Sub
 
@@ -345,3 +349,4 @@ initialization()
 
 'The entry point'
 main()
+
